@@ -1,6 +1,6 @@
 """
-bilibili_live.live
-直播间WebSocket连接与弹幕发送相关
+bilibili_live.aiorequest
+网络连接
 """
 import aiohttp
 import asyncio
