@@ -1,3 +1,7 @@
+"""
+bilibili_live.live
+直播间WebSocket连接与弹幕发送
+"""
 import asyncio
 import aiohttp
 import struct
