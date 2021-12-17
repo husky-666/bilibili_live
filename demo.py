@@ -27,7 +27,7 @@ async def on_gift(msg):
     gift_name = msg['data']['giftName']
     localtime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(msg['data']['timestamp']))
     print('[gift]' + 'time:' + localtime + ' ' + uname + ' ' + act + ' ' + gift_num + ' ' + gift_name)
-    # 礼物回复答谢
+    # 礼物回复答谢，发送请求过于频繁会导致发送失败，可考虑创建弹幕发送任务用于间隔发送弹幕
     bulletchat.msg = "感谢 " + uname + " " + act + "的" + gift_num + "个" + gift_name
     await room_operation.send_bulletchat(bulletchat=bulletchat, cookies=cookies)
 
